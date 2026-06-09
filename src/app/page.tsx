@@ -193,7 +193,7 @@ export default function DashboardPage() {
                         day: "numeric",
                       })}
                     </td>
-                    <td className="py-3 px-4 text-gray-500 text-sm max-w-[150px] truncate">
+                    <td className="py-3 px-4 text-gray-500 text-sm max-w-37.5 truncate">
                       {expense.note || "—"}
                     </td>
                     <td className="py-3 px-4">

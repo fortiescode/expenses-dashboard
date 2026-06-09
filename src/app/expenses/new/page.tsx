@@ -55,7 +55,7 @@ export default function NewExpensePage() {
               Amount *
             </label>
             <div className="relative">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-600">
                 $
               </span>
               <input
@@ -113,7 +113,7 @@ export default function NewExpensePage() {
               onChange={(e) => setNote(e.target.value)}
               placeholder="What was this expense for?"
               rows={3}
-              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
+              className="w-full text-gray-600 border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
             />
           </div>
 

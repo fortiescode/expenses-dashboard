@@ -56,7 +56,7 @@ export function DailyBarChart({ data }: DailyBarChartProps) {
             tickFormatter={(v) => `$${v}`}
           />
           <Tooltip
-            formatter={(value: number) => formatCurrency(value)}
+            formatter={(value: unknown) => formatCurrency(Number(value))}
             contentStyle={{
               borderRadius: "8px",
               border: "1px solid #e5e7eb",

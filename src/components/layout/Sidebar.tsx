@@ -16,7 +16,7 @@ export function Sidebar() {
     <aside className="w-64 bg-white border-r border-gray-200 min-h-screen p-6">
       <div className="mb-8">
         <h1 className="text-xl font-bold text-gray-900">💰 ExpenseTracker</h1>
-        <p className="text-sm text-gray-500 mt-1">Track your spending</p>
+        <p className="text-sm text-gray-600 mt-1">Track your spending</p>
       </div>
       <nav className="space-y-1">
         {navItems.map((item) => {
@@ -49,7 +49,7 @@ export function Header() {
           <span className="text-2xl">💰</span>
           <span className="font-semibold text-gray-900">Expense Tracker</span>
         </div>
-        <div className="text-sm text-gray-500">
+        <div className="text-sm text-gray-600">
           {new Date().toLocaleDateString("en-US", {
             weekday: "long",
             year: "numeric",

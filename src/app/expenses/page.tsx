@@ -42,7 +42,7 @@ export default function ExpensesPage() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Expenses</h1>
-            <p className="text-gray-500 mt-1">
+            <p className="text-gray-600 mt-1">
               {filtered.length} expense{filtered.length !== 1 ? "s" : ""} • Total:{" "}
               <span className="font-semibold text-gray-900">
                 {formatCurrency(total)}
@@ -117,7 +117,7 @@ export default function ExpensesPage() {
         {/* Expense List */}
         <div className="bg-white rounded-xl shadow-sm overflow-hidden">
           {filtered.length === 0 ? (
-            <div className="text-center py-16 text-gray-400">
+            <div className="text-center py-16 text-gray-600">
               <p className="text-lg mb-2">No expenses found</p>
               <Link
                 href="/expenses/new"
@@ -129,7 +129,7 @@ export default function ExpensesPage() {
           ) : (
             <table className="w-full">
               <thead>
-                <tr className="text-left text-sm text-gray-500 border-b border-gray-100 bg-gray-50">
+                <tr className="text-left text-sm text-gray-600 border-b border-gray-100 bg-gray-50">
                   <th className="py-3 px-4 font-medium">Amount</th>
                   <th className="py-3 px-4 font-medium">Category</th>
                   <th className="py-3 px-4 font-medium">Date</th>
@@ -148,7 +148,7 @@ export default function ExpensesPage() {
                     </td>
                     <td className="py-3 px-4">
                       <span
-                        className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium text-white"
+                        className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium"
                         style={{
                           backgroundColor:
                             {
@@ -161,6 +161,18 @@ export default function ExpensesPage() {
                               Travel: "#06b6d4",
                               Other: "#6b7280",
                             }[expense.category] || "#6b7280",
+                          color: ["#eab308", "#f97316", "#22c55e", "#06b6d4"].includes(
+                            {
+                              "Food & Dining": "#f97316",
+                              Transportation: "#3b82f6",
+                              Shopping: "#a855f7",
+                              Entertainment: "#ec4899",
+                              "Bills & Utilities": "#eab308",
+                              "Health & Fitness": "#22c55e",
+                              Travel: "#06b6d4",
+                              Other: "#6b7280",
+                            }[expense.category] || "#6b7280"
+                          ) ? "#1f2937" : "#ffffff",
                         }}
                       >
                         {expense.category}

@@ -18,7 +18,7 @@ export function StatCard({ label, value, icon, trend }: StatCardProps) {
           {icon}
         </div>
         <div>
-          <p className="text-sm text-gray-500">{label}</p>
+          <p className="text-sm text-gray-700">{label}</p>
           <p className="text-2xl font-bold text-gray-900">{value}</p>
           {trend && (
             <p
@@ -42,10 +42,17 @@ export function CategoryBadge({ category, size = "md" }: CategoryBadgeProps) {
   const color = CATEGORY_COLORS[category] || "#6b7280";
   const sizeClasses = size === "sm" ? "px-2 py-0.5 text-xs" : "px-3 py-1 text-sm";
 
+  // Light backgrounds need dark text for contrast
+  const lightColors = ["#eab308", "#f97316", "#22c55e", "#06b6d4"];
+  const useDarkText = lightColors.includes(color.toLowerCase());
+
   return (
     <span
-      className={`inline-flex items-center rounded-full font-medium text-white ${sizeClasses}`}
-      style={{ backgroundColor: color }}
+      className={`inline-flex items-center rounded-full font-medium ${sizeClasses}`}
+      style={{
+        backgroundColor: color,
+        color: useDarkText ? "#1f2937" : "#ffffff",
+      }}
     >
       {category}
     </span>

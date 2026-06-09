@@ -53,7 +53,7 @@ export default function EditExpensePage() {
     return (
       <div className="p-8">
         <div className="max-w-2xl mx-auto text-center py-16">
-          <p className="text-lg text-gray-500 mb-4">Expense not found</p>
+          <p className="text-lg text-gray-600 mb-4">Expense not found</p>
           <button
             onClick={() => router.push("/expenses")}
             className="text-blue-600 hover:text-blue-800 font-medium"
@@ -70,7 +70,7 @@ export default function EditExpensePage() {
       <div className="max-w-2xl mx-auto">
         <div className="mb-8">
           <h1 className="text-2xl font-bold text-gray-900">Edit Expense</h1>
-          <p className="text-gray-500 mt-1">Update this expense</p>
+          <p className="text-gray-600 mt-1">Update this expense</p>
         </div>
 
         <form

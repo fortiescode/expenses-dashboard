@@ -99,7 +99,15 @@
 - Main content: fluid
 - Grid: 1 col mobile, 2 col tablet, 3-4 col desktop
 
-## Charts
+## Accessibility (WCAG 2.1 AA)
+
+- All body text: minimum contrast ratio 4.5:1
+- All large text (18px+): minimum contrast ratio 3:1
+- Light category badges (yellow, orange, green, cyan): use dark text (#1f2937)
+- Dark category badges (blue, purple, pink, gray): use white text (#ffffff)
+- Avoid `text-gray-400` for meaningful text (decorative only)
+- Use `text-gray-600` minimum for body/secondary text on white
+- Use `text-gray-700` minimum for labels and form text on white
 - Pie chart: spending by category
 - Bar chart: daily spending (last 7/30 days)
 - Line chart: spending trend over time
